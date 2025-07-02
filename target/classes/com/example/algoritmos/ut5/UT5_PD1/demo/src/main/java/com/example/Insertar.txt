@@ -1,0 +1,30 @@
+Algoritmo Insertar(unaEtiqueta, etiquetaPadre)
+Entrada: unaEtiqueta (String), etiquetaPadre (String)
+Salida: Booleano (true si la inserción es correcta, false en caso contrario)
+
+Si etiquetaPadre es "" Entonces
+    Si raíz es null Entonces
+        Crear un nuevo nodo con unaEtiqueta
+        Asignar este nodo como la raíz del árbol
+        Retornar true
+    Sino
+        Retornar false
+FinSi
+
+Nodo padre ← BuscarNodo(raíz, etiquetaPadre)
+Si padre es null Entonces
+    Retornar false
+FinSi
+
+Nodo nuevo ← Crear un nuevo nodo con unaEtiqueta
+Si padre.primerHijo es null Entonces
+    padre.primerHijo ← nuevo
+Sino
+    Nodo hermano ← padre.primerHijo
+    Mientras hermano.hermanoDerecho no sea null
+        hermano ← hermano.hermanoDerecho
+    FinMientras
+    hermano.hermanoDerecho ← nuevo
+FinSi
+
+Retornar true

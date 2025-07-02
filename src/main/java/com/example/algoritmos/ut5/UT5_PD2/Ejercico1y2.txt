@@ -1,0 +1,135 @@
+Ejercicio 1
+
+1. Estructuras de Datos para un Trie
+
+Un trie es una estructura de datos de árbol utilizada para almacenar un conjunto dinámico de cadenas, 
+donde las claves son usualmente cadenas de caracteres. Cada nodo del trie representa un solo carácter 
+de una cadena, y los caminos en el árbol representan palabras completas.
+
+Para un alfabeto compuesto por las letras 'a'..'z', cada nodo del trie debe contener:
+Un array de 26 punteros (uno por cada letra del alfabeto).
+Un indicador de final de palabra (booleano).
+Una lista o estructura para almacenar las páginas donde aparece la palabra.
+
+2. Algoritmo para Construir el Índice en el Trie
+
+a) Descripción en Lenguaje Natural del Algoritmo
+
+1. Inicializar el trie vacío.
+2. Para cada palabra en el texto:
+    Navegar por el trie siguiendo los caracteres de la palabra.
+    Si un nodo correspondiente a un carácter no existe, crear uno nuevo.
+    Al llegar al final de la palabra, marcar el nodo como final de palabra.
+    Agregar la página correspondiente a la lista de páginas del nodo.
+
+b) Identificación de Precondiciones y Postcondiciones
+
+Precondiciones: El texto debe estar segmentado en palabras con la información de las páginas.
+Postcondiciones: El trie debe contener todas las palabras del texto con las páginas en las que aparecen.
+
+c)Pseudocódigo
+
+Algoritmo ConstruirIndiceTrie
+Entrada: Lista de pares (palabra, páginas) del texto
+Salida: Trie con las palabras y sus páginas
+
+Definir Nodo como
+    Caracteres: Array de 26 Nodos
+    FinPalabra: Booleano
+    Paginas: Lista de Enteros
+
+Función CrearNodo() -> Nodo
+    Nodo nuevoNodo
+    nuevoNodo.Caracteres ← Array[26] de Nodos
+    nuevoNodo.FinPalabra ← Falso
+    nuevoNodo.Paginas ← Lista vacía
+    Retornar nuevoNodo
+
+Procedimiento InsertarPalabra(trie: Nodo, palabra: Cadena, paginas: Lista de Enteros)
+    nodoActual ← trie
+    Para cada caracter en palabra
+        indice ← Ord(caracter) - Ord('a')
+        Si nodoActual.Caracteres[indice] = Null Entonces
+            nodoActual.Caracteres[indice] ← CrearNodo()
+        FinSi
+        nodoActual ← nodoActual.Caracteres[indice]
+    FinPara
+    nodoActual.FinPalabra ← Verdadero
+    nodoActual.Paginas.Agregar(paginas)
+
+Procedimiento ConstruirIndiceTrie(pares: Lista de (Cadena, Lista de Enteros))
+    trie ← CrearNodo()
+    Para cada (palabra, paginas) en pares
+        InsertarPalabra(trie, palabra, paginas)
+    FinPara
+    Retornar trie
+
+
+d) Análisis del Orden del Tiempo de Ejecución del Algoritmo
+
+El tiempo de ejecución del algoritmo está determinado por:
+Inserción de una palabra: O(m) donde (m) es la longitud de la palabra.
+Construcción del trie: O(n*m) donde (n) es el número de palabras y (m) es la longitud media de las palabras.
+
+
+El trie resultante tendrá la siguiente estructura:
+               (raíz)
+               / | \
+             a   c   p
+             |   |   |
+             l   a   r
+            / \  /|  |
+          a  i s o|  g
+         /|  |m  d|  r
+       b|i  n a| a|  o
+     a|m  t   | r|  g
+    s|a  r   | z|  r
+   t|ñ       |  a  a
+  r|o        r|  m  m
+ o|          r|  a  a
+[1,3,88]    [1]33] [15,16]
+
+
+3. Respuestas a las Preguntas
+
+1. Comparaciones para Programa: 8 comparaciones (una por cada carácter).
+2. Comparaciones para Proselitismo: 4 comparaciones (hasta "Pros", después no coincide).
+3. Comparaciones para insertar cazadores: 6 comparaciones (hasta "cazar", después crea nuevos nodos).
+4. Altura del trie resultante: La altura es 13 (longitud de la palabra más larga "Programación").
+5. Tamaño del trie: Número total de nodos creados.
+
+Ejercicio 2
+
+Algoritmo para Retornar las Páginas de una Palabra
+
+Descripción en Lenguaje Natural del Algoritmo
+
+1. Iniciar en la raíz del trie.
+2. Navegar por el trie siguiendo los caracteres de la palabra.
+3. Si se encuentra un nodo nulo antes de terminar la palabra, la palabra no está en el trie.
+4. Si se llega al final de la palabra, devolver la lista de páginas del nodo.
+
+Pseudocódigo
+
+Función BuscarPaginas(trie: Nodo, palabra: Cadena) -> Lista de Enteros
+    nodoActual ← trie
+    Para cada caracter en palabra
+        indice ← Ord(caracter) - Ord('a')
+        Si nodoActual.Caracteres[indice] = Null Entonces
+            Retornar "La palabra no está en el libro"
+        FinSi
+        nodoActual ← nodoActual.Caracteres[indice]
+    FinPara
+    Si nodoActual.FinPalabra = Verdadero Entonces
+        Retornar nodoActual.Paginas
+    Sino
+        Retornar "La palabra no está en el libro"
+    FinSi
+
+
+
+
+
+
+
+

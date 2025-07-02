@@ -1,0 +1,15 @@
+Insertar:
+
+Caso exitoso: Insertar una nueva unidad académica con una etiqueta única bajo una etiqueta de padre existente.
+Caso fallido: Intentar insertar una unidad académica bajo una etiqueta de padre inexistente o en un árbol con 
+una raíz ya existente si la etiqueta de padre es vacía.
+
+
+Buscar:
+
+Caso exitoso: Buscar una unidad académica que existe en el árbol.
+Caso fallido: Buscar una unidad académica que no existe en el árbol.
+
+ListarIndentado:
+
+Generar una lista de todas las unidades académicas del árbol, con cada nivel de la jerarquía indentado.

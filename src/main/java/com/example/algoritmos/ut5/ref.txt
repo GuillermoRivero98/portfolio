@@ -1,0 +1,6 @@
+Durante la quinta unidad, exploré árboles genéricos y tries, estructuras de datos avanzadas 
+utilizadas para gestionar y buscar datos eficientemente. Construí un índice de palabras 
+para un libro utilizando una estructura de trie, lo que me permitió entender cómo los 
+tries pueden mejorar el rendimiento en operaciones de búsqueda y almacenamiento. 
+Desarrollé algoritmos específicos para la manipulación de tries, incluyendo inserción, 
+búsqueda y eliminación de palabras, y analicé su rendimiento en comparación con otras estructuras de datos.
