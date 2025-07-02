@@ -1,0 +1,30 @@
+Ejercicio #1 – Manipular strings y Mostrar contenido de un array
+Parte 1
+En la clase ContadorPalabras, se desea agregar una función que reciba por parámetros 2 vectores de
+palabras (arrays de tipo String) y devuelva otro vector (array de Strings) conteniendo solamente las
+palabras que se encuentren en ambos vectores de entrada.
+Por ejemplo:
+Ar1={“Hola”, “mundo”, “de”, “los”, “algoritmos”}
+Ar2={“Hola”, “mundo”, “de”, “la”, “informática”}
+arResultado = {“Hola”, “mundo”, “de”}
+firma del método de la clase contadorPalabras:
+String[] palabrasComunes(String[] palabras1, String[] palabras2)
+Trabajo a realizar:
+a) Describir mediante lenguaje natural la nueva funcionalidad.
+
+Consiste en crear un método que reciba dos arreglos de cadenas (vectores de palabras) y 
+devuelva un nuevo arreglo que contenga únicamente las palabras que se encuentran en ambos 
+arreglos de entrada. Este método permitirá identificar las palabras comunes entre dos conjuntos 
+de datos, facilitando la comparación de textos o listas de palabras.
+
+b) Desarrollar e implementar el método solicitado.
+c) Dado el archivo de texto de entrada provisto, leer las líneas del mismo y e invocar al método
+desarrollado para los vectores de palabras generados por dos líneas cualesquiera
+(seleccionadas aleatoriamente).
+NOTAS IMPORTANTES:
+1. Utilizar construcciones while o for estándar para las recorridas de los vectores
+2. Optimizar la generación de strings usando las clases JAVA más apropiadas
+Parte 2
+• Los sub-equipos intercambian el código desarrollado.
+• Cada sub-equipo revisa el código de los compañeros, lo prueba y escribe notas de
+feedback

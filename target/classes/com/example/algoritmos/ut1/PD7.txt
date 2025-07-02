@@ -1,0 +1,60 @@
+EJERCICIO #1
+Observa el siguiente código:
+String s = "1";
+while (s != "1000") {
+s += "0";
+}
+
+El mismo representa un bucle infinito ya que la comparación con el operador == entre el objeto s y el
+literal “1000” jamás devuelve True.
+● ¿Por qué esto es así?
+genera un bucle infinito porque la comparación s != "1000" nunca será false.
+
+¿Qué diferencia representa con otros lenguajes como C#?
+En C#, el operador == para objetos String compara su contenido, no la referencia. 
+Por lo tanto, una comparación como s == "1000" en C# devolvería true si los valores 
+son iguales, evitando el bucle infinito. Java, en cambio, requiere el método equals() 
+para comparar contenido.
+
+EJERCICIO #2
+Observa los siguientes fragmentos de código:
+
+1.
+String s1 = "Hola";
+String s2 = "Hola";
+if ( s1 == s2 ) {
+System.out.println( "True" );
+} else {
+System.out.println( "False" );
+}//True:
+Cuando se asignan literales de String ("Hola") a s1 y s2, 
+ambos apuntan a la misma dirección en el pool de strings de Java, 
+por lo que s1 == s2 es true.
+
+2.
+String s1 = new String("Hola");
+String s2 = "Hola";
+if ( s1 == s2 ) {
+System.out.println( "True" );
+} else {
+System.out.println( "False" );
+}//False:
+s1 se crea con new String("Hola"), lo que genera un nuevo objeto en memoria 
+heap, distinto del literal "Hola" en el pool de strings. Como == compara referencias 
+y no contenido, s1 == s2 es false.
+
+● ¿Qué sentencia se ejecuta como resultado del If en cada caso y por qué? Busca en internet
+referencias que te permitan explicar las respuestas a las preguntas anteriores. Asegúrate que
+las mismas sean autoritativas y cítalas adecuadamente en tu respuesta.
+● Propone una versión correcta del código del Ejercicio #1.
+Ayuda: investiga cómo funciona el método intern() de la clase String.
+
+Solucion: 
+
+String s1 = new String("Hola").intern();
+String s2 = "Hola";
+if (s1 == s2) {
+    System.out.println("True");
+} else {
+    System.out.println("False");
+}

@@ -1,0 +1,32 @@
+REFLEXIÓN para fin de Unidad Temática
+Las siguientes son  algunas preguntas que pueden servirte como guía para tu reflexión personal sobre tus procesos de aprendizaje,  utilizando como medio los objetivos y actividades de esta Unidad Temática. 
+No es obligatorio que las contestes todas (son sólo una guía!!), e incluso puedes (y se recomienda que lo hagas) explorar otras inquietudes que no estén aquí representadas: lo importante es que, por unos minutos, te concentres en tus procesos de aprendizaje y medites sobre ellos, con el objetivo de procurar identificar acciones que te permitan mejorarlos.
+Recuerda referenciar todas las actividades que te han resultado beneficiosas, y en las carpetas correspondientes, poner las evidencias (trabajos extras, recursos adicionales consultados, ejercicios adicionales realizados y aprendizajes correspondientes obtenidos, etc.).
+Adicionalmente se sugiere analizar las “war stories” recomendadas como anécdotas para la Unidad Temática y reflexionar sobre las mismas (puedes agregar un documento de reflexión específico, y cualesquiera otros artefactos que sean convenientes).
+
+
+•	¿Cuáles son los resultados esperados del aprendizaje de esta Unidad Temática? (escribe lo que tú entiendas que son y significan)
+Creo que esta vez entiendo mejor como se diferencian java y c#, también la importancia de no codear de primera sino ir al lenguaje natural, pensar y escribir condiciones, seudocódigo y después el código. Además de la importancia de usar comentarios para recordar que quise hacer en dicho código.
+•	¿He alcanzado esos resultados? Documenta la(s) evidencia(s), si corresponde.
+Creo que estoy empezando a hacerlo, pero entiendo que me falta mucho por mejorar, sobre todo el organizarme a la hora de enfrentar un problema nuevo.
+•	¿Qué he aprendido? ¿Por qué aprendí?
+Aprendí que, si codeo de primera, generalmente me enredo. Para mi es preferible invertir mas tiempo en entender el problema y escribir lo que entendí.
+•	¿Cuándo aprendí? ¿En qué circunstancias? ¿Bajo qué condiciones?
+No se cuándo, estoy en ese proceso, pero podría decir que, por la clase, hacer ejercicios y mis compañeros de grupo.
+•	¿Cómo he aprendido – o cómo no? ¿Sé qué tipo de aprendiz soy?
+Una mezcla, me esta ayudando mucho escribir los ejemplos de los libros y tratar de codearlos, llenarlos de comentarios e ir viendo que hacen y sino entiendo pregunto en clase. 
+•	¿Cómo encaja lo que he aprendido en un plan completo y continuo de aprendizaje?
+Supongo que es el principio, la base, que me preocupa si esta realmente solida o se puede mejorar.
+•	¿Qué diferencia ha producido el aprendizaje en mi desarrollo intelectual, personal y ético?
+Sigo aprendiendo que no puedo ser atropellado a la hora de trabajar.
+•	¿Dónde, cuándo y cómo me he involucrado en aprendizaje integrado? ¿Ha sido mi aprendizaje conectado y coherente?
+Creo que, en clase escuchando otros razonamientos y comparándolo con lo que pensaba.
+•	¿Es mi aprendizaje relevante, aplicable y práctico?
+
+Creo que sí, siempre tener una estructura a la hora de enfrentar un problema es útil.
+•	¿Cuándo, cómo y por qué mi aprendizaje me ha sorprendido?
+A la hora de calcular tiempos de ejecución, empecé a entender algo que no tenia ni idea la primera vez que cursé a fin de curso. 
+•	¿De qué maneras mi aprendizaje ha sido valioso?
+Para entender como enfrentarme a problemas que tengo que descomponer y llevar a código 
+•	¿Qué diferencia ha hecho, para mi aprendizaje, la tutoría sobre el portafolios?
+Mayor organización 

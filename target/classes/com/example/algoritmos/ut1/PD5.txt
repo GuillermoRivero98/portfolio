@@ -1,0 +1,72 @@
+EJERCICIO #1
+Revisar el tutorial de ORACLE, en la parte de tipos enumerados
+(http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
+La declaración “enum” define una clase (llamada tipo enumerado). El cuerpo de esta clase
+puede incluir métodos y otros campos. En particular, el compilador automáticamente agrega
+algunos métodos especiales cuando crea un enum. Por ejemplo, tiene un método de valores
+estáticos que retorna un array que contiene todos los valores del enum en el orden en que
+fueron declarados.
+1) Escribe un ejemplo de uso de tal método, y asegúrate de comprender cómo funciona!!
+
+Los tipos enumerados (enum) permiten definir un conjunto de constantes con un significado específico.
+
+ej: que dia es
+
+enum Dia {
+    LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO;
+}
+
+public class EnumTest {
+    public static void main(String[] args) {
+        for (Dia d : Dia.values()) {
+            System.out.println(d);
+        }
+    }
+}
+
+2) Teniendo presente el programa que tu Equipo escribió para contar vocales y
+consonantes en una cierta frase, ¿cómo podrías escribirlo nuevamente utilizando tipos
+enumerados?
+
+EJERCICIO #8.
+¿Cuál es la capacidad inicial del siguiente stringbuilder?
+StringBuilder sb = new StringBuilder("Able was I ere I saw
+Elba.");
+La capacidad inicial es longitud de la cadena 42
+
+EJERCICIO #9.
+Considere la siguiente string:
+String hannah = "Did Hannah see bees? Hannah did.";
+a) ¿qué valor muestra la expresión “hannah.length”? 
+String hannah = "Did Hannah see bees? Hannah did.";
+System.out.println(hannah.length()); // 32
+
+b) ¿qué valor es retornado por la invocación del método “hannah.charAt(12)”?
+System.out.println(hannah.charAt(12)); // 'e'
+
+c) Escribe una expresión que referencie la letra “b” en la string referida por “hannah".
+System.out.println(hannah.indexOf('b')); // 15
+
+EJERCICIO #10.
+¿Cuán larga es las string devuelta por la siguiente expresión? La longitud de la string devuelta es 3
+¿cuál es la string? 3
+"Was it a car or a cat I saw?".substring(9, 12)
+
+EJERCICIO #11.
+En el siguiente programa, ¿cuál es el valor de “result” después de la ejecución de cada una de
+las líneas numeradas?
+public class ComputeResult {
+public static void main(String[] args) {
+String original = "este es el curso de Programación 2";
+StringBuilder result = new StringBuilder("hola");
+int index = original.indexOf('a');
+
+result.setCharAt(0, original.charAt(0)); // "eola"
+result.setCharAt(1, original.charAt(original.length()-1)); // "e2la"
+result.insert(1, original.charAt(4)); // "e 2la"
+result.append(original.substring(1,4)); // "e 2la ste"
+result.insert(3, (original.substring(index, index+2) + " ")); // "e 2laam ste"
+System.out.println(result);
+
+}
+}

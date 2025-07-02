@@ -1,0 +1,60 @@
+Ejercicio1:
+
+Dado el siguiente código fuente:
+public class IdentifyMyParts {
+public static int x = 7; //variable de clase static
+public int y = 3; //variable de instancia
+}
+
+a) ¿Cuáles son las variables de clase?
+
+- x es una variable de clase porque esta declarada como static
+
+-y es una variable de intancia, no tiene static y es unica para cada objeto
+
+b) ¿Cuáles son las variables de instancia?
+¿Cuál es la salida que produce el siguiente código?
+IdentifyMyParts a = new IdentifyMyParts();
+IdentifyMyParts b = new IdentifyMyParts();
+a.y = 5;
+b.y = 6;
+a.x = 1;
+b.x = 2;
+System.out.println("a.y = " + a.y);
+System.out.println("b.y = " + b.y);
+System.out.println("a.x = " + a.x);
+System.out.println("b.x = " + b.x);
+System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
+
+
+IdentifyMyParts a = new IdentifyMyParts();
+IdentifyMyParts b = new IdentifyMyParts();
+a.y = 5;
+b.y = 6;
+a.x = 1;
+b.x = 2;
+System.out.println("a.y = " + a.y); 
+System.out.println("b.y = " + b.y);
+System.out.println("a.x = " + a.x);
+System.out.println("b.x = " + b.x);
+System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
+
+Ejercicio3:
+
+1) El siguiente código crea un array y una string. ¿Cuántas referencias a estos objetos
+existen luego de que el código se ha ejecutado? ¿Es alguno de los objetos candidato a
+ser eliminado por el garbage collector? No, porque sigue referenciado en students[0].
+
+String[] students = new String[10]; //es un array de tamaño 10, por lo que una referencia sigue existiendo.
+String studentName = "Peter Parker"; //es almacenado en students[0], por lo que aún está referenciado.
+students[0] = studentName; 
+studentName = null; //elimina la referencia local, pero "Peter Parker" sigue accesible en students[0].
+...
+
+2) Cómo hace un programa para destruir un objeto que ha creado?
+
+Java usa un Garbage Collector que libera objetos sin referencias.
+
+UnO puede hacer que un objeto sea elegible para recolección asignando null a todas las referencias que lo apuntan.
+
+
