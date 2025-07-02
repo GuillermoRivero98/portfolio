@@ -1,0 +1,86 @@
+Ejercicio #1  
+Desarrolla los algoritmos para implementar las operaciones de Union  e Intersección sobre el TDA LISTA, 
+utilizado para representar un CONJUNTO. Los conjuntos de entrada se encuentran ordenados.  
+Debes seguir las normas para desarrollo de algoritmos en seudocódigo brindadas en el curso: 
+• especificación en lenguaje natural,  
+• pre y post condiciones,  
+• seudocódigo y  
+• especificación de casos de prueba.  
+• Analiza detalladamente el orden del tiempo de ejecución de estos algoritmos.
+
+Entradas: Dos listas ordenadas que representan conjuntos.
+Salida: Una lista que contiene los elementos que están presentes en ambos conjuntos.
+
+Precondiciones:
+Las listas de entrada deben estar ordenadas.
+Las listas no contienen elementos duplicados.
+
+Postcondiciones:
+La operación de unión devuelve una lista ordenada que contiene todos los elementos únicos de ambas listas.
+La operación de intersección devuelve una lista ordenada que contiene los elementos comunes de ambas listas.
+
+
+Comienza
+    NuevaLista <- ListaVacia
+    Iterador1 <- CrearIterador(listaOrdenada1)
+    Iterador2 <- CrearIterador(listaOrdenada2)
+
+    Elemento1 <- Siguiente(Iterador1)
+    Elemento2 <- Siguiente(Iterador2)
+
+    Mientras (Elemento1 ≠ Nulo y Elemento2 ≠ Nulo) Hacer
+        Si Elemento1 < Elemento2 Entonces
+            AgregarFinal(NuevaLista, Elemento1)
+            Elemento1 <- Siguiente(Iterador1)
+        Sino Si Elemento1 > Elemento2 Entonces
+            AgregarFinal(NuevaLista, Elemento2)
+            Elemento2 <- Siguiente(Iterador2)
+        Sino
+            AgregarFinal(NuevaLista, Elemento1)
+            Elemento1 <- Siguiente(Iterador1)
+            Elemento2 <- Siguiente(Iterador2)
+        FinSi
+    FinMientras
+
+    Mientras (Elemento1 ≠ Nulo) Hacer
+        AgregarFinal(NuevaLista, Elemento1)
+        Elemento1 <- Siguiente(Iterador1)
+    FinMientras
+
+    Mientras (Elemento2 ≠ Nulo) Hacer
+        AgregarFinal(NuevaLista, Elemento2)
+        Elemento2 <- Siguiente(Iterador2)
+    FinMientras
+
+    Devolver NuevaLista
+Fin
+
+Comienza
+    NuevaLista <- ListaVacia
+    Iterador1 <- CrearIterador(listaOrdenada1)
+    Iterador2 <- CrearIterador(listaOrdenada2)
+
+    Elemento1 <- Siguiente(Iterador1)
+    Elemento2 <- Siguiente(Iterador2)
+
+    Mientras (Elemento1 ≠ Nulo y Elemento2 ≠ Nulo) Hacer
+        Si Elemento1 = Elemento2 Entonces
+            AgregarFinal(NuevaLista, Elemento1)
+            Elemento1 <- Siguiente(Iterador1)
+            Elemento2 <- Siguiente(Iterador2)
+        Sino Si Elemento1 < Elemento2 Entonces
+            Elemento1 <- Siguiente(Iterador1)
+        Sino
+            Elemento2 <- Siguiente(Iterador2)
+        FinSi
+    FinMientras
+
+    Devolver NuevaLista
+Fin
+
+Tiempo de Ejecución
+Unión: La complejidad temporal es O(n + m), donde n y m son las longitudes de las 
+listas listaOrdenada1 y listaOrdenada2, respectivamente.
+
+Intersección: La complejidad temporal es O(n + m), donde n y m son las longitudes 
+de las listas listaOrdenada1 y listaOrdenada2, respectivamente.

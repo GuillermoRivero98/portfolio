@@ -1,0 +1,6 @@
+En la tercera unidad, aprendí a trabajar con diferentes estructuras de datos como listas, 
+pilas y colas. Implementé y comparé los tipos abstractos de datos (TADs) como Conjunto (Set), 
+y utilicé ArrayList y LinkedList para gestionar datos de manera eficiente. Analicé las diferencias 
+en el rendimiento de estas implementaciones para diversas operaciones. Además, trabajé en 
+operaciones utilizando la TDA Lista, lo que me permitió gestionar colecciones de datos y 
+realizar operaciones comunes como inserciones, eliminaciones y búsquedas de manera eficiente.

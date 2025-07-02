@@ -1,0 +1,11 @@
+Comienza
+Funcion QuitarDeCola() -> Elemento;
+    Si inicioCola = finCola:
+        Escribir "Cola vacía"
+        Devolver NULL 
+    Sino:
+        Elemento <- cola[inicioCola]
+        inicioCola <- (inicioCola + 1) modulo tamañoVector
+        Devolver Elemento
+    FinSi
+Fin

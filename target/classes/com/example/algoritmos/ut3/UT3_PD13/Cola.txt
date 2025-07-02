@@ -1,0 +1,22 @@
+TDA Cola
+- Atributos:
+  - lista: Lista
+
+- Métodos:
+  - Constructor: Cola()
+    - Crea una nueva instancia de Cola vacía.
+
+  - encolar(elemento: TipoElemento)
+    - Inserta un elemento al final de la cola.
+
+  - desencolar()
+    - Elimina y devuelve el elemento al frente de la cola.
+
+  - frente() -> TipoElemento
+    - Devuelve el elemento al frente de la cola sin eliminarlo.
+
+  - vacia() -> booleano
+    - Verifica si la cola está vacía.
+
+  - tamaño() -> entero
+    - Devuelve la cantidad de elementos en la cola.

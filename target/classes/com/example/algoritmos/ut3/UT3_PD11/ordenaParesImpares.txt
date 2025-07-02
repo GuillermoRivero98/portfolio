@@ -1,0 +1,18 @@
+Método ordenaParesImpares() -> Lista
+    // Lista auxiliar para almacenar elementos impares y pares
+    listaImpares <- nueva Lista()
+    listaPares <- nueva Lista()
+
+    // Iterar sobre la lista actual para separar elementos impares y pares
+    Para cada elemento en this hacer
+        Si elemento.codigo % 2 != 0 entonces
+            listaImpares.insertarOrdenado(elemento)
+        Sino
+            listaPares.insertarOrdenado(elemento)
+
+    // Combinar las dos listas ordenadas
+    listaOrdenada <- nueva Lista()
+    listaOrdenada.concatenar(listaImpares)
+    listaOrdenada.concatenar(listaPares)
+
+    Devolver listaOrdenada

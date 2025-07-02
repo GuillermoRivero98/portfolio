@@ -1,0 +1,38 @@
+TRABAJO DE APLICACIÓN 7 - Ejercicio 1
+
+Definiciones Básicas de Conjuntos y Operaciones:
+
+1. ¿Qué es un conjunto?
+   - Un conjunto es una colección de elementos distintos sin orden específico.
+
+2. ¿Cómo se define la pertenencia de elementos al conjunto? ¿Puede haber duplicados?
+   - La pertenencia se define por la presencia o ausencia de un elemento en el conjunto.
+   - En conjuntos matemáticos, no puede haber elementos duplicados.
+
+3. ¿Qué es el conjunto Universal?
+   - El conjunto Universal es el conjunto que contiene todos los elementos relevantes para un contexto dado.
+
+4. ¿Cuáles son las operaciones propias de los conjuntos y cómo se expresan matemáticamente?
+   - Unión (Union): A ∪ B = {x | x ∈ A o x ∈ B}
+   - Intersección (Interseccion): A ∩ B = {x | x ∈ A y x ∈ B}
+   - Diferencia (Diferencia): A - B = {x | x ∈ A y x ∉ B}
+   - Pertenencia (Pertenece): x ∈ A
+
+Algoritmo en Seudocódigo para la Operación Union (Unión):
+
+Algoritmo Union(A: Conjunto, B: Conjunto) -> Conjunto
+    C = Nuevo Conjunto()
+
+    Para cada elemento en A hacer
+        C.Agregar(elemento)
+
+    Para cada elemento en B hacer
+        Si elemento no está en C entonces
+            C.Agregar(elemento)
+
+    Devolver C
+
+Análisis de Complejidad para Union:
+- Si A tiene m elementos y B tiene n elementos:
+  - El tiempo de ejecución es O(m + n), debido a las operaciones de agregar y verificar la presencia de elementos.
+

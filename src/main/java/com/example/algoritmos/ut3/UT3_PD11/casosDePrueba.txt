@@ -1,0 +1,8 @@
+Caso de Prueba: Verificar ordenamiento correcto por código par e impar
+
+Lista desordenada: 4, 71, 3, 6, 12, 8, 35, 11, 22, 17
+Lista esperada: 3, 11, 17, 35, 71, 4, 6, 8, 12, 22
+
+Inicializar lista con elementos desordenados
+Llamar a ordenaParesImpares()
+Comparar resultado con lista esperada

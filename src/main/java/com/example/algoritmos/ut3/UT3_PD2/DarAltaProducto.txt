@@ -1,0 +1,28 @@
+Precondiciones:
+Se asume que la lista de productos está inicializada y ordenada alfabéticamente por el nombre.
+El producto a ingresar no debe existir previamente en la lista.
+
+Postcondiciones:
+
+Después de ejecutar el algoritmo, el nuevo producto estará correctamente insertado en la lista, 
+manteniendo el orden alfabético por nombre.
+
+Algoritmo DarAltaProducto(nombreProducto, codigoProducto, precioUnitario):
+    // Precondición: La listaProductos está inicializada y ordenada alfabéticamente
+    
+    nuevoProducto <- CrearNodoProducto(nombreProducto, codigoProducto, precioUnitario)
+    nodoActual <- primerNodo
+    
+    Si listaProductos está vacía o nombreProducto < nodoActual.nombre:
+        // Caso: Insertar al principio de la lista
+        nuevoProducto.siguiente <- primerNodo
+        primerNodo <- nuevoProducto
+    Sino:
+        Mientras nodoActual.siguiente != Nulo y nombreProducto > nodoActual.siguiente.nombre:
+            nodoActual <- nodoActual.siguiente
+        
+        // Caso: Insertar en medio o al final de la lista
+        nuevoProducto.siguiente <- nodoActual.siguiente
+        nodoActual.siguiente <- nuevoProducto
+    
+    // Postcondición: El producto ha sido insertado correctamente en orden alfabético

@@ -1,0 +1,27 @@
+Algoritmo controlCorchetes(listaDeEntrada: lista de caracteres) -> booleano
+    // Crear una pila para controlar los corchetes abiertos
+    pila <- nueva Pila()
+
+    Para cada caracter en listaDeEntrada hacer
+        Si caracter es '(' o '{' o '[' entonces
+            pila.apilar(caracter)
+        Sino si caracter es ')' entonces
+            Si pila.vacia() o pila.tope() ≠ '(' entonces
+                Devolver FALSO
+            Sino
+                pila.desapilar()
+        Sino si caracter es '}' entonces
+            Si pila.vacia() o pila.tope() ≠ '{' entonces
+                Devolver FALSO
+            Sino
+                pila.desapilar()
+        Sino si caracter es ']' entonces
+            Si pila.vacia() o pila.tope() ≠ '[' entonces
+                Devolver FALSO
+            Sino
+                pila.desapilar()
+
+    // Al final, si la pila está vacía, la secuencia es correcta
+    Devolver pila.vacia()
+
+Tiempo de ejecución 0(n), n es la longitud de la lista de entrada

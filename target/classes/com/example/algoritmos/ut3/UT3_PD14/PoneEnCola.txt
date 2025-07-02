@@ -1,0 +1,9 @@
+Comienza
+Procedimiento PoneEnCola(Elemento):
+    Si (finCola + 1) modulo tamañoVector = inicioCola:
+        Escribir "Cola llena. No se puede agregar más elementos"
+    Sino:
+        cola[finCola] <- Elemento
+        finCola <- (finCola + 1) modulo tamañoVector
+    FinSi
+Fin

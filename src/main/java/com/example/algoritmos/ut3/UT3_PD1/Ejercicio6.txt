@@ -1,0 +1,31 @@
+Ejercicio #6  
+Escenario: 
+Se desea llevar un registro de asistencia de un cierto curso universitario, el cual contará con 
+una cantidad no determinada inicialmente de alumnos. Para ello, se ha decidido utilizar una 
+lista para representar los alumnos en este curso.  
+Cada elemento de la lista entonces tendrá un identificador del alumno y un campo que se ha 
+de incrementar cada vez que el alumno concurra a una clase. También se desea registrar el 
+total de clases impartidas en el curso, y con este dato luego para cada alumno obtener el 
+porcentaje de asistencia a las clases.  
+Las listas pueden implementarse físicamente de dos formas básicas: utilizando un array, o 
+armando una lista encadenada. Se desea la opinión experta de tu Equipo para determinar qué 
+utilizar para resolver eficientemente el problema planteado.  
+a) ¿Cuál es el costo de memoria en cada caso? 
+b) ¿Cuáles son las consideraciones que tu Equipo haría referentes a la cantidad de 
+alumnos del curso que soporta cada tipo de estructura? (puedes considerar que, como 
+en la UCU, las inscripciones al curso suelen estar habilitadas desde varias semanas 
+antes de empezar el curso hasta dos semanas después de haber comenzado)
+
+a)
+1.Array
+El costo de memoria de un array es fijo y depende de la cantidad 
+máxima de alumnos que se espera manejar en el curso. Se asigna memoria contigua para 
+almacenar todos los elementos, independientemente de si están siendo utilizados o no. 
+Por lo tanto, si se espera que el número de alumnos sea grande pero no se conoce de 
+antemano, el array podría desperdiciar memoria si se reserva un espacio demasiado grande.
+
+2.Lista 
+El costo de memoria de una lista encadenada es más dinámico que el de un array. 
+Se asigna memoria solo para los nodos que se necesitan, lo que significa que el 
+costo de memoria puede ser menor si el número de alumnos es menor que la capacidad 
+maxima de un array. 

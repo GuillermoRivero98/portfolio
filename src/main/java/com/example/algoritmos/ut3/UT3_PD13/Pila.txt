@@ -1,0 +1,22 @@
+TDA Pila
+- Atributos:
+  - lista: Lista
+
+- Métodos:
+  - Constructor: Pila()
+    - Crea una nueva instancia de Pila vacía.
+
+  - apilar(elemento: TipoElemento)
+    - Inserta un elemento en la parte superior de la pila.
+
+  - desapilar()
+    - Elimina y devuelve el elemento en la parte superior de la pila.
+
+  - tope() -> TipoElemento
+    - Devuelve el elemento en la parte superior de la pila sin eliminarlo.
+
+  - vacia() -> booleano
+    - Verifica si la pila está vacía.
+
+  - tamaño() -> entero
+    - Devuelve la cantidad de elementos en la pila.
