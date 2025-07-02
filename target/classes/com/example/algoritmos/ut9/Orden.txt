@@ -1,0 +1,58 @@
+1)¿Cómo se genera un vector monótonamente ascendente?
+
+    public int[] generarDatosAscendentes()
+
+    Este método rellena un array con valores crecientes desde 0 hasta TAMANIO_MAX - 1
+
+    Ejemplo:
+
+        [0, 1, 2, 3, ..., 31999]
+
+2)¿Cómo se genera un vector monótonamente descendente?
+
+    public int[] generarDatosDescendentes()
+
+    Este método rellena un array con valores decrecientes desde TAMANIO_MAX hasta 1
+
+    Ejemplo:
+
+        [32000, 31999, 31998, ..., 1]
+
+3) ¿Cómo se genera un vector con valores aleatorios? ¿Pueden existir claves repetidas?
+ ¿Cuál es el orden del tiempo de ejecución?
+
+    Se usa el método:
+        public int[] generarDatosAleatorios() 
+
+        Este método genera una permutación de los números 0 a TAMANIO_MAX - 1 usando 
+        un array auxiliar boolean[] para evitar duplicados.
+
+        NO hay claves repetidas
+
+        Tiempo de ejecución: es aproximadamente O(n) en promedio (puede variar por colisiones)
+
+4) ¿Cuántos elementos contiene el vector de datos generado? ¿Cómo se puede parametrizar?
+
+    Los vectores generados tienen tamaño fijo: TAMANIO_MAX = 32000
+
+    Para parametrizarlo: 
+    
+        Reemplazar private static int TAMANIO_MAX por private int tamanio;
+
+        y agregar constructor:
+
+        public GeneradorDatosGenericos(int tamanio) {
+            this.tamanio = tamanio;
+        }
+
+5) ¿Cómo podemos verificar que un conjunto está ordenado? 
+¿Cuál sería el orden del tiempo de ejecución de un algoritmo que lo haga?
+
+    public boolean estaOrdenado(int[] vector) {
+        for (int i = 1; i < vector.length; i++) {
+            if (vector[i - 1] > vector[i]) return false;
+        }
+        return true;
+    }
+
+    Complejidad: O(n)

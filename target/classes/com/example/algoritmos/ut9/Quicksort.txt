@@ -1,0 +1,71 @@
+Resumen del algoritmo Quicksort
+
+    Para cada llamada recursiva, el pivote divide el array en dos subarrays, 
+
+    de tal forma que todos los elementos en el subarray izquierdo son menores o iguales 
+
+    al pivote, y todos los elementos en el subarray derecho son mayores o iguales al pivote. 
+
+    Esta condición se cumple en siempre hasta que los subarrays alcanzan tamaño 1 o 0, 
+
+    donde se consideran ordenados.
+
+
+44, 55, 12, 42, 94, 18, 6, 67
+
+EncuentraPivote = max(44, 55) = 55
+
+Se reordenan los elementos para colocar los menores a la izquierda y los mayores a la derecha del pivote (55)
+
+4, 12, 42, 18, 6, 55, 94, 67
+
+Tomamos la mitad del array y repetimos
+Pivote = max(44, 12) = 44
+
+12, 18, 6, 42, 44, 55, 94, 67
+
+Pivote = max(12, 18) = 18
+
+12, 6, 18, 42, 44, 55, 94, 67
+
+Pivote = max(12, 6) = 12
+
+12, 6, 18, 42, 44, 55, 94, 67
+
+Pivote = max(12, 6) = 12
+
+6, 12, 18, 42, 44, 55, 94, 67
+
+Pivote = max(55, 94) = 94
+
+6, 12, 18, 42, 44, 55, 67, 94
+
+
+totalLlamadas= 9
+MaxProfundiad = 5
+
+En java se podria usar un static nivelActual y que aumente despues de entrar en la llamada
+Lo mismo con MaxProfundiad.
+
+
+Resumen: Dual-Pivot Quicksort 
+
+    Utiliza dos pivotes para dividir el array en tres partes: 
+    menores al primer pivote, entre pivotes, y mayores al segundo pivote.
+
+    Mejora el rendimiento sobre arrays parcialmente ordenados y con elementos repetidos.
+
+    Orden de ejecución:
+
+        Mejor: O(n log n)
+        Peor: O(n^2) 
+
+    No es estable
+
+    Se combina con Inserción Directa cuando los subarrays son pequeños
+
+
+El caso dado en clase de Quicksort:
+
+    su orden es n cuadrado, analizando sus sentencias tiene 2 que en su
+    peor caso son n, enteonces su orden en el peor caso seria n al cuadrado.
