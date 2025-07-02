@@ -1,0 +1,26 @@
+Ejercicio #3  
+Dado un Árbol binario de búsqueda que almacena elementos con claves de tipo entero 
+desarrolla un algoritmo, que Calcule la Suma de las claves de todos los elementos del árbol. 
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en 
+clase, deberás desarrollar: 
+1. Descripción en lenguaje natural del algoritmo solicitado 
+2. Identificación de precondiciones y postcondiciones correspondientes 
+3. Escritura del algoritmo en seudocódigo formal 
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+Función SumaClaves(Arbol):
+    Si Arbol es nulo:
+        Devolver 0 
+    Sino:
+        Suma = 0 
+        RecorridoEnOrden(Arbol.raiz, Suma) 
+        Devolver Suma
+
+Función RecorridoEnOrden(Nodo, Suma):
+    Si Nodo no es nulo:
+        RecorridoEnOrden(Nodo.izquierdo, Suma) 
+        Suma = Suma + Nodo.clave 
+        RecorridoEnOrden(Nodo.derecho, Suma) 
+
+
+tiempo de ejecucion: O(n)

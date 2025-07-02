@@ -1,0 +1,46 @@
+Ejercicio #4  
+Desarrolla un algoritmo que, recibiendo como parámetro un entero que indica un cierto nivel, 
+devuelva la cantidad de nodos del árbol que se encuentran en dicho nivel. 
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en 
+clase, deberás desarrollar: 
+1. Descripción en lenguaje natural del algoritmo solicitado 
+2. Identificación de precondiciones y postcondiciones correspondientes 
+3. Escritura del algoritmo en seudocódigo formal 
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+LN
+
+Comenzar desde la raíz del árbol.
+Si el árbol está vacío, la cantidad de nodos en el nivel dado es 0.
+Utilizar un recorrido en orden (inorder) del árbol, llevando un contador de la profundidad o nivel de cada nodo.
+Durante el recorrido, aumentar el contador cada vez que se descienda un nivel en el árbol.
+Si el contador alcanza el nivel dado, incrementar otro contador para contar los nodos en ese nivel.
+Al final del recorrido en orden, el segundo contador contendrá la cantidad de nodos en el nivel dado.
+
+Precondiciones
+
+El árbol debe estar inicializado correctamente y no ser nulo.
+El nivel dado como parámetro debe ser mayor o igual a 1.
+
+Postcondiciones
+
+Se devuelve la cantidad de nodos en el nivel dado correctamente.
+
+seudocódigo
+
+Función ContarNodosEnNivel(Arbol, nivel):
+    Si Arbol es nulo:
+        Devolver 0 
+    Sino:
+        ContadorNodos = 0 
+        RecorridoEnOrden(Arbol.raiz, 1, nivel, ContadorNodos) //rec en orden
+        Devolver ContadorNodos
+
+Función RecorridoEnOrden(Nodo, nivelActual, nivelDeseado, ContadorNodos):
+    Si Nodo no es nulo:
+        RecorridoEnOrden(Nodo.izquierdo, nivelActual + 1, nivelDeseado, ContadorNodos) // rec el subárbol izquierdo
+        Si nivelActual es igual a nivelDeseado:
+            ContadorNodos = ContadorNodos + 1 
+        RecorridoEnOrden(Nodo.derecho, nivelActual + 1, nivelDeseado, ContadorNodos) // rec el subárbol derecho
+
+timpo de ej: O(n)

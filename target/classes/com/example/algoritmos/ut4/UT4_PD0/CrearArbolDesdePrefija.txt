@@ -1,0 +1,28 @@
+LN:
+Diseñar un algoritmo que construya un árbol binario de expresión a partir 
+de una expresión aritmética en notación prefija.
+Manejar adecuadamente las subexpresiones y los operadores.
+Considerar posibles errores como falta de operadores o operandos.
+
+Precondiciones:
+La expresión en notación prefija debe ser válida y bien formada.
+Deben existir métodos para manejar la inserción de nodos y construcción del árbol.
+
+Postcondiciones:
+Se crea correctamente el árbol binario que representa la expresión aritmética.
+
+Función CrearArbolDesdePrefija(ExpresionPrefija):
+    PilaNodos = nueva Pila
+    
+    Para cada token en ExpresionPrefija de derecha a izquierda:
+        Si token es operando:
+            Crear un nodo con el operando y apilarlo en PilaNodos
+        Sino si token es operador:
+            NodoOperador = CrearNodo(token)
+            NodoOperador.hijo_derecho = PilaNodos.desapilar()
+            NodoOperador.hijo_izquierdo = PilaNodos.desapilar()
+            PilaNodos.apilar(NodoOperador)
+    
+    Devolver PilaNodos.desapilar()  // Raíz del árbol resultante
+
+Tiempo de ejecucion: 0(n), n es la longitud de la expresión prefija

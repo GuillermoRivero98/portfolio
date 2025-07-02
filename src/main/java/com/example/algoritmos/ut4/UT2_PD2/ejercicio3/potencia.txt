@@ -1,0 +1,14 @@
+Desarrolla en seudocódigo, en forma recursiva, un algoritmo para calcular la potencia de un número. El 
+mismo ha de recibir como parámetros el número y el exponente (ver la ppt de clase sobre recursividad).  
+• Identifica claramente el caso base y la sentencia que lo contempla. 
+• ¿Puedes verificar que siempre el algoritmo progresará hacia el caso base? 
+
+Función Potencia(base, exponente):
+    Si exponente es igual a 0:
+        Devolver 1
+    Sino si exponente es igual a 1:
+        Devolver base
+    Sino:
+        Devolver base * Potencia(base, exponente - 1)
+
+Analiza el orden del tiempo de ejecución del algoritmo: O(n)

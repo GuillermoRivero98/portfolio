@@ -1,0 +1,57 @@
+Ejercicio #1  
+Desarrolla un algoritmo (ambas partes, método de Árbol y método de Nodo), para Insertar un 
+nuevo Nodo en el Árbol (este nuevo nodo se ha de brindar como parámetro al método del 
+Arbol). 
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en 
+clase, deberás desarrollar: 
+1. Descripción en lenguaje natural del algoritmo solicitado 
+2. Identificación de precondiciones y postcondiciones correspondientes 
+3. Escritura del algoritmo en seudocódigo formal 
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+
+LN:
+Comenzar desde la raíz del árbol.
+Comparar el valor del nuevo nodo con el valor del nodo actual.
+Si el valor del nuevo nodo es menor que el valor del nodo actual, ir al subárbol izquierdo.
+Si el valor del nuevo nodo es mayor que el valor del nodo actual, ir al subárbol derecho.
+Insertar el nuevo nodo como hijo izquierdo si su valor es menor que el nodo actual, 
+o como hijo derecho si su valor es mayor.
+
+Precondiciones:
+El árbol debe estar inicializado correctamente y no ser nulo.
+El nuevo nodo a insertar debe estar inicializado y no ser nulo.
+
+postcondiciones:
+El nuevo nodo se inserta en el árbol correctamente según las reglas de un ABB.
+
+Seudocodigo:
+
+Procedimiento InsertarNodo(Arbol, NuevoNodo):
+    Si Arbol es nulo:
+        Devolver : El árbol está vacío, no se puede insertar el nodo
+    Sino:
+        Si NuevoNodo.valor < Arbol.valor:
+            Si Arbol.izquierdo es nulo:
+                Arbol.izquierdo = NuevoNodo 
+            Sino:
+                InsertarNodo(Arbol.izquierdo, NuevoNodo) 
+        Sino si NuevoNodo.valor > Arbol.valor:
+            Si Arbol.derecho es nulo:
+                Arbol.derecho = NuevoNodo 
+            Sino:
+                InsertarNodo(Arbol.derecho, NuevoNodo) 
+
+
+
+Tiempo del algoritmo:
+El tiempo dependera de la altura del arbol. Si el arbol esta perferctamente
+balanceado, la latura sera 0(log n) (n siendo el numero de nodos).
+Si el arbol esta desblanceado la altura podria ser 0(n)
+
+En el peor de los casos el algoritmo recorrera la altura del arbol
+para insertar un nuevo nodo, lo que llevara 0(h) con h siendo la
+altura del arbol. 
+
+Por lo tanto, el tiempo de ejecucion deL algoritmo de inserccion
+de un ABB es O(h)

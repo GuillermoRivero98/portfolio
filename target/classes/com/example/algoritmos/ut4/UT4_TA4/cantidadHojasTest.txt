@@ -1,0 +1,24 @@
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TArbolBBTest {
+    
+    @Test
+    public void testNivel() {
+        // Crear un árbol con un conjunto conocido de claves
+        TArbolBB arbol = new TArbolBB();
+        arbol.insertar(5);
+        arbol.insertar(3);
+        arbol.insertar(8);
+        arbol.insertar(1);
+        arbol.insertar(4);
+        arbol.insertar(7);
+        arbol.insertar(10);
+        
+        // Verificar el nivel de una clave presente en el árbol
+        assertEquals(2, arbol.nivel(3));
+        
+        // Verificar el nivel de una clave que no está presente en el árbol
+        assertEquals(-1, arbol.nivel(6));
+    }
+}

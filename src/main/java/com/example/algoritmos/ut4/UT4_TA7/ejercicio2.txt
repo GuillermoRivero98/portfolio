@@ -1,0 +1,29 @@
+Función algoritmoDos():
+    x <- 0
+    y <- 0
+    
+    Si (hijoIzquierdo = nulo y hijoDerecho = nulo) entonces
+        Devolver 0
+    Fin Si
+    
+    Si hijoIzquierdo ≠ nulo entonces
+        x <- hijoIzquierdo.algoritmoDos()
+    Fin Si
+    
+    Si hijoDerecho ≠ nulo entonces
+        y <- hijoDerecho.algoritmoDos()
+    Fin Si
+    
+    Devolver x + y + 1
+Fin Función
+
+
+resultado 4
+
+    4
+   / \
+  3   6
+ /   / \
+1   5   7
+ \
+  2

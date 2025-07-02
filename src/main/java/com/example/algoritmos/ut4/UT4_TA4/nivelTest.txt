@@ -1,0 +1,21 @@
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TArbolBBTest {
+    
+    @Test
+    public void testCantidadHojas() {
+        // Crear un árbol con una cantidad conocida de nodos hoja
+        TArbolBB arbol = new TArbolBB();
+        arbol.insertar(5);
+        arbol.insertar(3);
+        arbol.insertar(8);
+        arbol.insertar(1);
+        arbol.insertar(4);
+        arbol.insertar(7);
+        arbol.insertar(10);
+        
+        // Verificar la cantidad de hojas del árbol
+        assertEquals(4, arbol.cantidadHojas());
+    }
+}

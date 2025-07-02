@@ -1,0 +1,18 @@
+Algoritmo cantidadHojas:
+    Función cantidadHojasRecursivo(nodo):
+        Si nodo es nulo entonces
+            Devolver 0
+        Fin Si
+        Si nodo no tiene hijos entonces
+            Devolver 1
+        Fin Si
+        Devolver cantidadHojasRecursivo(nodo.izquierdo) + cantidadHojasRecursivo(nodo.derecho)
+    Fin Función
+    
+    Si el árbol está vacío entonces
+        Devolver 0
+    Fin Si
+    Devolver cantidadHojasRecursivo(raiz)
+Fin Algoritmo
+
+

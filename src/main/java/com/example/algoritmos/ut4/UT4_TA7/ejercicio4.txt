@@ -1,0 +1,34 @@
+Función algoritmoCuatro(unaEti):
+    A <- 0
+    
+    Si unaEti < etiqueta entonces
+        Si hijoIzq ≠ nulo entonces
+            A <- hijoIzq.algoritmoCuatro(unaEti)
+        Fin Si
+    Fin Si
+    
+    Si unaEti > etiqueta entonces
+        Si hijoDer ≠ nulo entonces
+            A <- hijoDer.algoritmoCuatro(unaEti)
+        Fin Si
+    Fin Si
+    
+    Si unaEti = etiqueta entonces
+        A <- 1
+    Fin Si
+    
+    Devolver A
+Fin Función
+
+Resultado con unaEti = 1: 
+
+arbol:
+        4
+       / \
+      3   6
+     /   / \
+    1   5   7
+     \
+      2
+
+resultado: con unaEti =1 es 0

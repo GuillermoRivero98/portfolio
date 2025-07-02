@@ -1,0 +1,15 @@
+Desarrolla en seudocódigo, en forma recursiva, un algoritmo para invertir los componentes de un vector 
+pasado por parámetro, entre dos índices indicados también pasados como parámetros. (ver la ppt de clase 
+sobre recursividad). 
+•  Identifica claramente el / los  caso(s) base y la(s) sentencia(s) que lo contempla(n). 
+• ¿Puedes verificar que siempre el algoritmo progresará hacia el caso base?
+
+Función invertirVector(A, inicio, fin):
+    Si inicio es mayor o igual a fin:
+        Devolver A  // Caso base: cuando el inicio es mayor o igual al fin, no hay elementos para invertir
+    Sino:
+        Intercambiar A[inicio] y A[fin]
+        Llamar a invertirVector(A, inicio + 1, fin - 1)
+        Devolver A
+
+Analiza el orden del tiempo de ejecución del algoritmo. O(n)

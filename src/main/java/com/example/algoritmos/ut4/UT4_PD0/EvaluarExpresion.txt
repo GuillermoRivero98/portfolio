@@ -1,0 +1,39 @@
+LN:
+Dado un árbol binario que representa expresiones aritméticas con operadores (+, -, *, /), variables y constantes.
+Sustituir valores concretos para las variables.
+Evaluar la expresión resultante y devolver el resultado.
+
+Precondiciones:
+El árbol binario debe representar correctamente la expresión aritmética.
+Los valores de las variables deben estar disponibles para sustitución.
+
+Postcondiciones:
+
+Se evalúa correctamente la expresión aritmética con los valores dados.
+Se emite el resultado de la evaluación.
+
+Función EvaluarExpresion(Arbol, ValoresVariables):
+    Si Arbol es nulo:
+        Devolver 0  // Árbol vacío, resultado por defecto
+        
+    Si Arbol es una constante:
+        Devolver valor de la constante
+    
+    Si Arbol es una variable:
+        Devolver valor correspondiente de ValoresVariables
+    
+    OperandoIzquierdo = EvaluarExpresion(Arbol.hijo_izquierdo, ValoresVariables)
+    OperandoDerecho = EvaluarExpresion(Arbol.hijo_derecho, ValoresVariables)
+    
+    Si Arbol es suma:
+        Devolver OperandoIzquierdo + OperandoDerecho
+    Sino si Arbol es resta:
+        Devolver OperandoIzquierdo - OperandoDerecho
+    Sino si Arbol es multiplicación:
+        Devolver OperandoIzquierdo * OperandoDerecho
+    Sino si Arbol es división:
+        Devolver OperandoIzquierdo / OperandoDerecho
+
+Tiempo de ejecucion: 
+En el peor caso, donde el árbol está completamente balanceado, el tiempo es
+O(n) siendo n la cantidad de nodos en el árbol.

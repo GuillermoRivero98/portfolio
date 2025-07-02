@@ -1,0 +1,53 @@
+Ejercicio #1  
+Operaciones Complementarias – seudocódigo y análisis 
+1. Obtener la menor clave del árbol. 
+2. Obtener la mayor clave del árbol. 
+3. Obtener la clave inmediata anterior a una clave dada (pasada por parámetro) 
+4. Obtener la cantidad de nodos de un nivel dado (por parámetro) 
+5. Listar todas las hojas cada una con su nivel. 
+6. Verificar si el árbol es de búsqueda. 
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en 
+clase, desarrolla (SIGUIENDO LOS PASOS EN EL ORDEN INDICADO): 
+1. Descripción en lenguaje natural del algoritmo solicitado 
+2. Identificación de precondiciones y postcondiciones correspondientes 
+3. Descripción en lenguaje natural de los casos de prueba correspondientes a cada 
+operación 
+4. Escritura del algoritmo en seudocódigo formal (RECUERDA ESCRIBIR CORRECTAMENTE 
+LAS FIRMAS DE LAS OPERACIONES) 
+5. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+
+LN:
+
+Comenzar desde la raíz del árbol.
+Moverse hacia la izquierda hasta llegar al nodo más a la izquierda del árbol.
+Devolver la clave del nodo encontrado.
+
+Precondiciones
+
+El árbol debe estar inicializado correctamente y no ser nulo.
+
+Postcondiciones
+
+se devuelve la menor clave del árbol correctamente.
+
+
+Descripción en LN de pruebas
+
+Caso de prueba 1: Árbol vacío. Se espera obtener un valor nulo.
+Caso de prueba 2: Árbol con un solo nodo. Se espera obtener la clave del único nodo del árbol.
+Caso de prueba 3: Árbol con múltiples nodos. Se espera obtener la clave más pequeña del árbol.
+
+Seudocodigo
+
+Función ObtenerMenorClave(Arbol):
+    Si Arbol es nulo:
+        Devolver null // El árbol está vacío
+    Sino:
+        NodoActual = Arbol.raiz
+        Mientras NodoActual.izquierdo no sea nulo:
+            NodoActual = NodoActual.izquierdo // Moverse hacia la izquierda
+        Devolver NodoActual.clave
+
+Tiempo de ejecucion
+0(log n)

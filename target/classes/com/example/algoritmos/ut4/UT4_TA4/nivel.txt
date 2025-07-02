@@ -1,0 +1,23 @@
+Algoritmo nivel(clave):
+    Función buscarNivel(nodo, nivelActual):
+        Si nodo es nulo entonces
+            Devolver -1
+        Fin Si
+        Si clave es igual a la clave del nodo entonces
+            Devolver nivelActual
+        Fin Si
+        Buscar en el subárbol izquierdo y derecho recursivamente
+        Si el resultado de buscar en el subárbol izquierdo es diferente de -1 entonces
+            Devolver resultado
+        Fin Si
+        Si el resultado de buscar en el subárbol derecho es diferente de -1 entonces
+            Devolver resultado
+        Fin Si
+        Devolver -1
+    Fin Función
+    
+    Si el árbol está vacío entonces
+        Devolver -1
+    Fin Si
+    Devolver buscarNivel(raiz, 0)
+Fin Algoritmo

@@ -1,0 +1,9 @@
+Reflexión UT4
+En esta unidad empecé a entender mejor las estructuras de los algoritmos que están en las lecturas 
+y usamos en clase. Empecé a ver, pero sigo sin entender del todo el uso recursivo en algunos algoritmos. 
+Empecé a entender como balancear arboles y como hacer los giros para dejarlos balanceados. El tema de 
+como balancear después de borrar un elemento me sigue siendo difícil. 
+Empecé a lograr hacer programas mas desacoplados y mas robustos, pero siento que me falta para llegar 
+bien para el parcial 
+Sigo teniendo problemas con las Pruebas de unidad. El “iRAT” me fue bastante mejor pero 
+no estoy llegando al mínimo, no sé si será todavía por falta de estudio o por alguna dificultad al entender la letra

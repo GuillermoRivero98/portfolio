@@ -1,0 +1,25 @@
+Función encuentraLinealUno(nombreAtributo, valorAtributo):
+    Si el árbol es vacío entonces
+        Devolver falso
+    Fin Si
+    
+    Si el valor del atributo actual es igual a valorAtributo entonces
+        Devolver verdadero
+    Fin Si
+    
+    Si encuentraLinealUno(nombreAtributo, valorAtributo) para el hijo izquierdo entonces
+        Devolver verdadero
+    Fin Si
+    
+    Si encuentraLinealUno(nombreAtributo, valorAtributo) para el hijo derecho entonces
+        Devolver verdadero
+    Fin Si
+    
+    Devolver falso
+Fin Función
+
+¿Cuántas comparaciones se realizan si el valor del atributo buscado tiene está en el nodo de etiqueta igual a 1?
+3 en el peor caso
+Comparación en el nodo actual.
+Comparación en el hijo izquierdo (si existe).
+Comparación en el hijo derecho (si no se encontró en el izquierdo).

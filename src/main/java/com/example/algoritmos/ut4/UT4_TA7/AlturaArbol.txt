@@ -1,0 +1,22 @@
+Procedimiento algoritmoUno():
+    x <- -1
+    y <- -1
+    Si hijoIzquierdo ≠ nulo entonces
+        hijoIzquierdo.algoritmoUno()
+    Fin Si
+    Si hijoDerecho ≠ nulo entonces
+        hijoDerecho.algoritmoUno()
+    Fin Si
+    Devolver máximo(x + 1, y + 1)
+Fin Procedimiento
+
+arbol:
+        4
+       / \
+      3   6
+     /   / \
+    1   5   7
+     \
+      2
+
+el resultado es 2

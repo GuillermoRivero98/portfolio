@@ -1,0 +1,40 @@
+Desarrolla un algoritmo (ambas partes, método de Arbol y método de Nodo), para contar 
+todas las hojas que tiene el Árbol. 
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en 
+clase, deberás desarrollar: 
+1. Descripción en lenguaje natural del algoritmo solicitado 
+2. Identificación de precondiciones y postcondiciones correspondientes 
+3. Escritura del algoritmo en seudocódigo formal 
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+LN
+
+Comenzar desde la raíz del árbol.
+Verificar si el nodo actual es una hoja (es decir, no tiene hijos).
+Si el nodo es una hoja, aumentar el contador en 1.
+Si el nodo no es una hoja, continuar recursivamente hacia los nodos hijos izquierdo y derecho.
+Sumar los resultados de las llamadas recursivas para obtener el total de hojas en el árbol.
+
+Precondiciones:
+
+El árbol debe estar inicializado correctamente y no ser nulo.
+
+Postcondiciones:
+
+Se cuenta el número total de hojas en el árbol correctamente.
+
+Seudocodigo:
+
+Comienza
+Función ContarHojas(Arbol):
+    Si Arbol es nulo:
+        Devolver 0
+    Sino si Arbol.izquierdo es nulo y Arbol.derecho es nulo:
+        Devolver 1 
+    Sino:
+        Devolver ContarHojas(Arbol.izquierdo) + ContarHojas(Arbol.derecho)
+
+
+Tiempo de ejecucion:
+Sup que tienen n nodos. En el peor de los casos el tiempo de ejecucion
+del algoritmo tendra que ser 0(n)

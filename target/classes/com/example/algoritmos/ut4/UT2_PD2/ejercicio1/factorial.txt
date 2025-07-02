@@ -1,0 +1,28 @@
+Ejrcicio 1
+Desarrolla en seudocódigo,  en forma recursiva, un algoritmo para calcular el factorial de un cierto número 
+entero que se pasa como parámetro.  
+• Identifica claramente el caso base y la sentencia que lo contempla. 
+• ¿Puedes verificar que siempre el algoritmo progresará hacia el caso base?
+
+Función factorial(número):
+    Si número es igual a 0:
+        Devolver 1
+    Sino:
+        Devolver número * factorial(número - 1)
+
+
+
+factorial(5) = 5 * factorial(4)
+              = 5 * (4 * factorial(3))
+              = 5 * (4 * (3 * factorial(2)))
+              = 5 * (4 * (3 * (2 * factorial(1))))
+              = 5 * (4 * (3 * (2 * (1 * factorial(0)))))
+              = 5 * (4 * (3 * (2 * (1 * 1))))
+              = 5 * (4 * (3 * (2 * 1)))
+              = 5 * (4 * (3 * 2))
+              = 5 * (4 * 6)
+              = 5 * 24
+              = 120
+
+Analiza el orden del tiempo de ejecución del algoritmo. 
+tiempo de ejecucion del algoritmo crece linealmente resp a n ----> 0(n)

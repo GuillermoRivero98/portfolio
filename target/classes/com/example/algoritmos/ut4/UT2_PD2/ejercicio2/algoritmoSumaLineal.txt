@@ -1,0 +1,13 @@
+Desarrolla en seudocódigo,  en forma recursiva, el algoritmo Algoritmo SumaLineal(A, n), que se describe en 
+la ppt de clase sobre recursividad.  
+• Identifica claramente el caso base y la sentencia que lo contempla. 
+• ¿Puedes verificar que siempre el algoritmo progresará hacia el caso base?
+
+Función SumaLineal(A, n):
+    Si n es igual a 0:
+        Devolver 0
+    Sino:
+        Devolver A[n-1] + SumaLineal(A, n-1)
+
+Analiza el orden del tiempo de ejecución del algoritmo : 0(n)
+
