@@ -1,0 +1,4 @@
+Esta Unidad Temática me ha permitido comprender en profundidad los conceptos de diccionarios, 
+mapas y hashing en Java, así como su aplicación práctica en la resolución de problemas. 
+He aprendido a seleccionar la estructura de datos más adecuada según los requerimientos del problema, 
+como el uso de HashMap para contar las frecuencias de palabras en un libro de manera más eficiente. 
